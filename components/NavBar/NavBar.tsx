@@ -2,16 +2,18 @@
 
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { slide as Menu } from "react-burger-menu";
 
 export default function NavBar() {
   const [position, setPosition] = useState(0);
+  const pathName = usePathname();
   const navLinks = [
-    { label: "Home", id: "home" },
-    { label: "About Us", id: "about-us" },
-    { label: "services", id: "services" },
-    { label: "Contact us", id: "contact-us" },
+    { label: "Home", id: "home", link: "/" },
+    { label: "About Us", id: "about-us", link: "#" },
+    { label: "services", id: "services", link: "#" },
+    { label: "Contact us", id: "contact-us", link: "#" },
   ];
 
   useEffect(() => {
@@ -27,28 +29,27 @@ export default function NavBar() {
   return (
     <div
       className={classNames(
-        "fixed bg-black z-30 pt-7 pb-10 duration-700 text-white w-full",
-        position > 30 ? "bg-black" : "bg-transparent"
+        "fixed bg-black z-30 py-2  duration-700 text-white w-full",
+        position > 30 || pathName != "/" ? "bg-black" : "bg-transparent"
       )}
     >
-      <nav className="flex  justify-between  items-end  max-w-[72rem] px-5 mx-auto">
+      <nav className="flex  justify-between  items-center  max-w-[72rem] px-5 mx-auto">
         <div className="flex">
           <Image
-            src={"/logo.svg"}
+            src={"/logo-1.png"}
             width={500}
-            className="w-60"
+            className="w-28"
             height={500}
             alt="logo"
           />
         </div>
-        <ul className="flex items-center mb-1 gap-5">
+        <ul className="flex items-center  gap-5">
           {navLinks.map((item) => (
-            <li
-              className="uppercase cursor-pointer hover:text-gray-200 flex gap-5"
-              key={item.id}
-            >
-              {item.label}
-            </li>
+            <Link href={item.link} key={item.id}>
+              <li className="uppercase cursor-pointer hover:text-gray-200 flex gap-5">
+                {item.label}
+              </li>
+            </Link>
           ))}
         </ul>
       </nav>
