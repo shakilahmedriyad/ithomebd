@@ -29,7 +29,7 @@ export default function NavBar() {
   return (
     <div
       className={classNames(
-        "fixed bg-black z-30 py-2  duration-700 text-white w-full",
+        "fixed bg-black z-30   duration-700 text-white w-full",
         position > 30 || pathName != "/" ? "bg-black" : "bg-transparent"
       )}
     >
@@ -38,7 +38,7 @@ export default function NavBar() {
           <Image
             src={"/logo-1.png"}
             width={500}
-            className="w-28"
+            className="w-32"
             height={500}
             alt="logo"
           />

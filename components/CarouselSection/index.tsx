@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import ContentLayout from "@/utils/ContentLayout";
 import { Card, CardContent } from "../ui/card";
+import Link from "next/link";
 export default function CarouselSection() {
   return (
     <div className="py-10 bg-gray-200">
@@ -16,22 +17,39 @@ export default function CarouselSection() {
           Our courses
         </h1>
         <Carousel className="w-full ">
-          <CarouselContent className="-ml-1">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem
+          <CarouselContent className="-ml-1 w-full">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <Link
+                className="pl-1 max-w-[33%] "
+                href={`/course/${index}`}
                 key={index}
-                className="pl-1 md:basis-1/2 lg:basis-1/4"
               >
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-2xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
+                <CarouselItem className="w-full">
+                  <div className="p-1">
+                    <Card className="max-w-[100%]">
+                      <CardContent className="flex flex-col  aspect-square  justify-center p-6">
+                        <Image
+                          src={"/course/facebook-marketing.png"}
+                          alt="facebook marketing"
+                          className="w-full h-full"
+                          width={1920}
+                          height={1080}
+                        />
+                        <div className="text-left space-y-2 mt-7">
+                          <h2 className="text-2xl font-semibold">
+                            Facebook marketing
+                          </h2>
+                          <div className="flex justify-between">
+                            <p>milestone:36</p>
+                            <p>lession:124</p>
+                          </div>
+                          <p>total: 36 hours</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              </Link>
             ))}
           </CarouselContent>
           <CarouselPrevious />

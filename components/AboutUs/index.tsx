@@ -9,13 +9,13 @@ export default function AboutUs() {
           <p>Our Story</p>
           <h2 className="text-5xl font-medium">Who Are We</h2>
           <p>
-            Avinya Labs is the trusted advisor for brands that want to be heard.
-            We specialize in building your brand and flourishing it with
-            credibility in today’s media-saturated world where attention spans
-            are limited. With a team of over 20 employees, offices in 3
-            continents, and our expertise in Web 2 and Web 3 since 2017, we
-            strive to create impactful campaigns that will be talked about for
-            years. We’re committed to excellence.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
+            adipisci tenetur doloribus omnis distinctio sit sed dolorum quos
+            quidem assumenda minima, animi modi eius illum quas quam similique
+            in et? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Nihil est iure hic adipisci quae ut, illo repudiandae eius sequi
+            sapiente vero quo eos consequuntur! Recusandae amet ratione dolores
+            doloribus explicabo!
           </p>
         </div>
         <div className="sm:w-[35%] order-1 sm:order-2">

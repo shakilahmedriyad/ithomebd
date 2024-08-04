@@ -7,14 +7,19 @@ export default function HeadingSection() {
       <video
         src="/bgVideo.mp4"
         loop
-        className="w-full h-full  absolute object-cover"
+        className="w-full brightness-75 h-full absolute object-cover"
         autoPlay
         muted
       />
       <ContentLayout>
         <div className="relative mx-5  pt-[20rem] z-10 text-white">
-          <h3 className="text-7xl font-medium">Full-Service Web</h3>
-          <h3 className="text-7xl font-medium">3.0 Agency</h3>
+          <h3 className="text-5xl font-medium">
+            Learn Blockchain with Ithomlab
+          </h3>
+          <p className="text-xl mt-4 font-medium">
+            Empowering Your Web3 Journey with Expert Guidance and Cutting-Edge
+            Solutions
+          </p>
           <Button
             className="uppercase text-2xl mt-8 hover:text-white bg-white text-black !py-8 "
             size={"lg"}

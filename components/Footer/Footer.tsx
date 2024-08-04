@@ -1,4 +1,6 @@
 import ContentLayout from "@/utils/ContentLayout";
+import { FaTelegram } from "react-icons/fa6";
+import { AiFillTwitterCircle } from "react-icons/ai";
 import { Button } from "../ui/button";
 
 export default function Footer() {
@@ -23,6 +25,10 @@ export default function Footer() {
             <p>
               Business Bay, <br /> Mirpur <br /> Dhaka,Bangladesh
             </p>
+            <div className="flex gap-1 items-center w-full">
+              <FaTelegram size={30} />
+              <AiFillTwitterCircle size={33} />
+            </div>
           </div>
         </div>
       </ContentLayout>
