@@ -35,15 +35,17 @@ export default function NavBar() {
       )}
     >
       <nav className="flex  justify-between  items-center  max-w-[72rem] px-5 mx-auto">
-        <div className="flex ">
-          <Image
-            src={"/logo-1.png"}
-            width={500}
-            className="w-24"
-            height={500}
-            alt="logo"
-          />
-        </div>
+        <Link href={"/"}>
+          <div className="flex cursor-pointer ">
+            <Image
+              src={"/logo-1.png"}
+              width={500}
+              className="w-24"
+              height={500}
+              alt="logo"
+            />
+          </div>
+        </Link>
         <ul className="hidden md:flex items-center  gap-5">
           {navLinks.map((item, index) =>
             index == 0 ? (
