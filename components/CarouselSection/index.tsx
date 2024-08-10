@@ -1,14 +1,8 @@
 import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import ContentLayout from "@/utils/ContentLayout";
 import { Card, CardContent } from "../ui/card";
 import Link from "next/link";
+import { MdOutlineTimer } from "react-icons/md";
 export default function CarouselSection() {
   return (
     <div className="py-10 bg-gray-200">
@@ -16,49 +10,51 @@ export default function CarouselSection() {
         <h1 className="text-center text-5xl font-medium my-10 uppercase">
           Our courses
         </h1>
-        <Carousel className="w-full ">
-          <CarouselContent className="-ml-1 w-full">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <Link
-                className="pl-1 max-w-[33%] "
-                href={`/course/${index}`}
-                key={index}
-              >
-                <CarouselItem className="w-full">
-                  <div className="p-1">
-                    <Card className="max-w-[100%]">
-                      <CardContent className="flex flex-col  aspect-square  justify-center p-6">
-                        <Image
-                          src={"/course/facebook-marketing.png"}
-                          alt="facebook marketing"
-                          className="w-full h-full"
-                          width={1920}
-                          height={1080}
-                        />
-                        <div className="text-left space-y-2 mt-7">
-                          <h2 className="text-2xl font-semibold">
-                            Facebook marketing
-                          </h2>
-                          <div className="flex justify-between">
-                            <p>milestone:36</p>
-                            <p>lession:124</p>
-                          </div>
-                          <p>total: 36 hours</p>
+        <div className="flex gap-5 md:flex-row flex-col items-center w-full justify-center">
+          {Array.from({ length: 2 }).map((_, index) => (
+            <Link key={index} className="" href={`/course/${12}`}>
+              <div className="p-1">
+                <Card className="max-w-[22rem]">
+                  <CardContent className="flex flex-col  aspect-square  justify-center p-3 ">
+                    <Image
+                      src={"/course/facebook-marketing.png"}
+                      alt="facebook marketing"
+                      className="max-w-[20rem] h-full"
+                      width={1920}
+                      height={1080}
+                    />
+                    <div className="text-left space-y-2 mt-7">
+                      <h2 className="text-2xl font-Raleway font-bold">
+                        Facebook Marketing
+                      </h2>
+                      <div className="">
+                        <p className="line-clamp-1 text-gray-600 text-sm">
+                          Emran haque, Blockchain enthusiast || Web3 Community
+                          Management |Growth Hacker | Web3 Marketing
+                        </p>
+                        <div className="flex font-bold my-1 items-center gap-1">
+                          <p>5.0</p>
+                          <p>⭐⭐⭐⭐⭐</p>
+                          <p className="text-xs text-gray-600">(22+)</p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              </Link>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MdOutlineTimer size={25} />
+                        <p>36 hours</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </Link>
+          ))}
+        </div>
         <div className="mt-48 gap-10 md:flex-row flex-col flex w-full justify-between ">
-          <div className="md:w-[50%] order-2 md:order-1 space-y-5">
-            <p className="text-2xl">The future</p>
-            <h2 className="text-4xl font-medium">
+          <div className="md:w-[50%] order-2 md:order-1 space-y-2">
+            <p className="uppercase font-Raleway font-bold text-gray-500">
+              The future
+            </p>
+            <h2 className="text-3xl uppercase font-Raleway font-bold">
               Moving Into The Digital Era
             </h2>
             <p>
@@ -79,13 +75,10 @@ export default function CarouselSection() {
             </p>
           </div>
           <div className="md:w-[50%] md:order-2 order-1 flex justify-end">
-            <Image
-              src="/sysadmin.jpg"
-              className="rounded-full md:h-[25rem] object-cover  md:w-[25rem]"
-              alt=""
-              width={1024}
-              height={1024}
-            />
+            <iframe
+              className="w-full h-full"
+              src="https://lottie.host/embed/79fa66c3-33e8-42af-a4d9-207c86024e10/KXGrvi5iPU.json"
+            ></iframe>
           </div>
         </div>
       </ContentLayout>

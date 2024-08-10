@@ -5,15 +5,15 @@ export default function HeadingSection() {
   return (
     <div className="relative min-h-screen w-full">
       <video
-        src="/bgVideo.mp4"
+        src="/bgvideo.mp4"
         loop
         className="w-full brightness-75 h-full absolute object-cover"
         autoPlay
         muted
       />
       <ContentLayout>
-        <div className="relative mx-5  pt-[20rem] z-10 text-white">
-          <h3 className="text-5xl font-medium">
+        <div className="relative max-w-[50rem] mx-5  pt-[20rem] z-10 text-white">
+          <h3 className="text-6xl  font-Raleway font-bold">
             Learn Blockchain with Ithomlab
           </h3>
           <p className="text-xl mt-4 font-medium">
